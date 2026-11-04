@@ -1,0 +1,14 @@
+.git
+.gitignore
+.venv
+.pytest_cache
+__pycache__
+*.py[cod]
+.DS_Store
+data
+tests
+scripts
+models/classifier.pkl
+models/vectorizer.pkl
+models/metrics.json
+models/model_metadata.json

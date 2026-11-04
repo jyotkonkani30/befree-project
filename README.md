@@ -1,6 +1,6 @@
-# Befree
+# project
 
-Befree is a Streamlit application for extracting, validating, classifying, and exporting bank statement transactions from text-based, scanned, and mixed PDFs.
+this project  is a Streamlit application for extracting, validating, classifying, and exporting bank statement transactions from text-based, scanned, and mixed PDFs.
 
 ## Features
 

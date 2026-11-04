@@ -13,7 +13,7 @@ this project  is a Streamlit application for extracting, validating, classifying
 - CSV and Excel exports with clean, consistent columns
 - Extraction diagnostics for rejected or uncertain records
 
-The application preserves uncertain values and reports validation issues rather than fabricating financial data. Classification does not use an LLM or an external AI API.
+
 
 ## Output
 

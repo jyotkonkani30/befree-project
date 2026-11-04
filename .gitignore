@@ -1,0 +1,28 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+
+# Local/generated datasets and statement samples
+data/*
+!data/bank_name_heading_reference.csv
+
+# Generated exports and training reports
+*.csv
+*.xlsx
+*.json
+data/**/*.csv
+data/**/*.xlsx
+data/**/*.json
+data/**/*.pdf
+
+# Keep the runtime classifier bundle
+!models/
+models/*
+!models/transaction_classifier.joblib
+
+# Keep the bank-heading regression reference
+!data/
+data/*
+!data/bank_name_heading_reference.csv

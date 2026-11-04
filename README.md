@@ -1,26 +1,22 @@
-# Bank Statement Processing & Classification System
+# Befree
 
-This focused Streamlit prototype extracts text from text, scanned, and mixed PDFs, parses account and transaction fields, validates records, and classifies transactions with deterministic rules followed by a traditional TF-IDF/LogisticRegression model. No LLM is used for classification.
+Befree is a Streamlit application for extracting, validating, classifying, and exporting bank statement transactions from text-based, scanned, and mixed PDFs.
 
-## Setup
+## Features
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
+- PDF text and OCR extraction
+- Account and statement metadata detection
+- Transaction parsing with balance validation
+- Rule-based classification with TF-IDF and Logistic Regression fallback
+- Counterparty and payment-rail extraction
+- Duplicate and reconciliation checks
+- CSV and Excel exports with clean, consistent columns
+- Extraction diagnostics for rejected or uncertain records
 
-Install the Tesseract binary and Poppler separately for OCR (macOS: `brew install tesseract poppler`).
+The application preserves uncertain values and reports validation issues rather than fabricating financial data. Classification does not use an LLM or an external AI API.
 
-## Run
+## Output
 
-```bash
-python scripts/generate_synthetic_data.py
-python scripts/generate_synthetic_pdfs.py
-python scripts/build_training_dataset.py
-python scripts/train_classifier.py
-streamlit run app.py
-pytest -v
-```
+Exports contain:
 
-Synthetic PDFs are simulated bank layouts for demonstration and testing, not official bank templates. The application preserves uncertain rows and emits validation flags rather than silently changing financial values.
+`Transaction Date`, `Transaction ID`, `Description`, `Counterparty`, `Payment Rail`, `Debit`, `Credit`, `Balance`, and `Category`.
